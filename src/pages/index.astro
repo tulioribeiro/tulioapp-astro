@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import Prose from "../components/Prose.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <Layout>
-	<Welcome />
+  <main class="container mx-auto flex max-w-[56rem] flex-col gap-16 px-8">
+    <Prose>
+      <h3>About.</h3>
+      <p>
+        I'm a front-end software engineer specializing in the React ecosystem,
+        passionate about building high-performance and accessible digital
+        experiences. I focus on speed, usability, and inclusivity while
+        implementing robust testing strategies to ensure code quality and
+        maintainability. I value clear communication and collaboration, aligning
+        technical solutions with business goals and user needs to deliver
+        seamless, impactful digital products that drive results and
+        satisfaction.
+      </p>
+    </Prose>
+    <Prose>
+      <h3>Posts.</h3>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </Prose>
+  </main>
 </Layout>

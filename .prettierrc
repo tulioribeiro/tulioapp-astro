@@ -1,0 +1,16 @@
+{
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.astro,*.md",
+      "options": {
+        "parser": "astro",
+        "endOfLine": "lf",
+        "proseWrap": "preserve",
+        "htmlWhitespaceSensitivity": "css",
+        "bracketSameLine": false
+      }
+    }
+  ]
+}
