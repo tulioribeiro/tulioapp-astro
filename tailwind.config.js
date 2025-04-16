@@ -23,6 +23,7 @@ module.exports = {
             "--tw-prose-quotes": "var(--tapp-text)", // Quote color
             "--tw-prose-quote-borders": "var(--tapp-box)", // Quote border color
             "--tw-prose-quote-borders": "var(--tapp-box)", // Quote border color
+            "--tw-prose-hr": "var(--tapp-hr)", // Quote border color
             code: {
               "&::before": { content: "none" }, // Remove the ` before
               "&::after": { content: "none" }, // Remove the ` after,

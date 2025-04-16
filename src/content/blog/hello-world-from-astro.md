@@ -1,7 +1,7 @@
 ---
-title: "Hello world from astro"
-description: "Just learning something new"
-pubDate: "Apr 19, 2024"
+title: Hello world from astro
+description: Just learning something new
+pubDate: Apr 19, 2024
 ---
 
 Hi there! 👋

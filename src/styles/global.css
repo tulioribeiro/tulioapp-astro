@@ -3,19 +3,21 @@
 @config "../../tailwind.config.js";
 
 :root {
-  --tapp-bg: #101217; /* Fundo - Um preto azulado bem escuro */
-  --tapp-box: #1a1e25; /* Caixa/Container - Cinza-azulado médio */
-  --tapp-text: #c2c8d0; /* Texto - Um cinza claro suave */
-  --tapp-titles: #9788d8; /* Títulos - Um roxo claro com leve toque azulado */
-  --tapp-links: #7a6dbf; /* Links - Roxo médio com tonalidade calma */
+  --tapp-bg: #101217;
+  --tapp-box: #1a1e25;
+  --tapp-text: #c2c8d0;
+  --tapp-titles: #9788d8;
+  --tapp-links: #7a6dbf;
+  --tapp-hr: rgb(122, 109, 191, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --tapp-bg: #0c0f14; /* Fundo escuro mais profundo */
-    --tapp-box: #16191f; /* Caixa - Cinza mais escuro */
-    --tapp-text: #b6bcc4; /* Texto - Cinza claro mais desaturado */
-    --tapp-titles: #8679c8; /* Títulos - Roxo médio com um brilho sutil */
-    --tapp-links: #6958a8; /* Links - Roxo escuro com tonalidade elegante */
+    --tapp-bg: #0c0f14;
+    --tapp-box: #16191f;
+    --tapp-text: #b6bcc4;
+    --tapp-titles: #8679c8;
+    --tapp-links: #6958a8;
+    --tapp-hr: rgb(122, 109, 191, 0.3);
   }
 }
